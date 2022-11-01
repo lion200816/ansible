@@ -4,7 +4,7 @@
   tasks:
     - name: Create a resource group
       azure_rm_resourcegroup:
-        name: {{ resource_group }}
+        name: "{{ resource_group }}"
         location: southeastasia
         tags:
           testing: testing
