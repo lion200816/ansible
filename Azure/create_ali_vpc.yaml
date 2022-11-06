@@ -1,4 +1,8 @@
-	- name: Create a new alicloud VPC resource
+---
+- hosts: localhost
+  connection: local
+  tasks:
+  - name: Create a new alicloud VPC resource
 	  alibaba.alicloud.ali_vpc:
 		  state: 'present'
 		  cidr_block: '10.244.244.0/28'
