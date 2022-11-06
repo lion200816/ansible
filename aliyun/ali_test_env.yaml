@@ -3,4 +3,5 @@
   connection: local
   tasks:
     - debug:
-        var: ALICLOUD_SECRET_KEY
+        msg: "{{ lookup('env','ALICLOUD_SECRET_KEY') }}"
+
