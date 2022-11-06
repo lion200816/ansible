@@ -6,4 +6,5 @@
     register: result
   - debug:
       var: result.stdout
-
+  - debug:
+      msg: "{{ lookup('env','ALICLOUD_SECRET_KEY') }}"
