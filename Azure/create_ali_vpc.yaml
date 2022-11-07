@@ -4,10 +4,10 @@
   tasks:
   - name: Create a new alicloud VPC resource
     ali_vpc:
-	  state: 'present'
-	  alicloud_region: 'cn-hangzhou'
-	  cidr_block: '10.244.244.0/28'
-	  name: '{{ vpc_name }}'
-	  description: '{{ vpc_description }}'
-	  tags: '{"test":"lion"}'
+      state: 'present'
+      alicloud_region: 'cn-hangzhou'
+      cidr_block: '10.244.244.0/28'
+      name: '{{ vpc_name }}'
+      description: '{{ vpc_description }}'
+      tags: '{"test":"lion"}'
     register: vpc
