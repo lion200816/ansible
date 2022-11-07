@@ -9,5 +9,8 @@
       cidr_block: '10.244.244.0/28'
       name: '{{ vpc_name }}'
       description: '{{ vpc_description }}'
-      tags: '{"test":"lion"}'
+      tags: 
+        project_code: TEST
+        environment: PROD
+        type: VPC
     register: vpc
