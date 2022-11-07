@@ -3,9 +3,11 @@
   connection: local
   tasks:
   - name: Create a new alicloud VPC resource
-    alibaba.alicloud.ali_vpc:
-		  state: 'present'
-		  cidr_block: '10.244.244.0/28'
-		  vpc_name: '{{ vpc_name }}'
-		  description: '{{ vpc_description }}'
+    ali_vpc:
+	  state: 'present'
+	  alicloud_region: 'cn-hangzhou'
+	  cidr_block: '10.244.244.0/28'
+	  name: '{{ vpc_name }}'
+	  description: '{{ vpc_description }}'
+	  tags: '{"test":"lion"}'
     register: vpc
